@@ -37,7 +37,7 @@ Due to the large number of dimensions in the feature space, using dimensionality
 
 The results gathered show a clearly better performance in separation using Independent Component Analysis (ICA), rather than Principal Components Analysis (PCA), both in the Metrics Dimensionality Reduction and in the Violations Dimensionality Reduction. In Fig. 1 it is evident that the energy of Principal Components scales linearly with the number of components, up until the point where all the dimensions left  correspond to PMDs that have constant values equal to zero. This means that PCA isn’t better than a reordering of the features. On the other hand, the superiority of ICA is due to its tendency to find basis vectors in order to represent the original data as different sub-elements. Therefore, by finding vectors that are independent components of our data, it is easier to end up with a representation that shows clearly separated clusters. ICA is a blind source separation technique. PCA, in the other hand, aims at finding a low-rank representation of the data. In other words, it tries to compress it. This doesn’t always end up with clearly defined clusters in the low-dimension space. In Fig. 3, 4 we can see the 2-dimensional ICA space for Metrics and PMDs.
 
-<img align="center" width="100" height="100" src="/figures/Fig1.png"> *Energy of Principal Components of PMDs*
+<img align="center" width="300" height="300" src="/figures/Fig1.png"> *Energy of Principal Components of PMDs*
 
 C. *Model Construction*<br/>
 
