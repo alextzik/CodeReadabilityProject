@@ -40,6 +40,10 @@ The results gathered show a clearly better performance in separation using Indep
 ![Fig. 1](/figures/Fig1.png)
 *Energy of Principal Components of PMDs*
 
+| ![Fig. 1](/figures/Fig1.png)
+|:--:| 
+| *Energy of Principal Components of PMDs* |
+
 C. *Model Construction*<br/>
 
 By performing dimensionality reduction in both the Metrics and Violations subspaces, we get the results shown in Fig. 2, 3. It is evident that clear clusters exist in the Metrics case, while there is a linear structure in the case of the Violations.
