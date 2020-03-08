@@ -25,6 +25,6 @@ We consider the Metrics’ category to be highly correlated to the human percept
 The primary goal of this assignment is to create lower dimensional spaces for readability and simplicity, where there is a clear separation of the data in different categories based on these metrics.
 
 ## System Design
-* A. System Overview
-The structure of the system created is a simple one. The features from the dataset are extracted at first. Then preprocessing follows in order to simplify and make the data easy to visualize. In the end clustering is performed. Traditional clustering and division of the low-dimensional data in a scale due to its linearity can be applied.
+A. System Overview
+    - The structure of the system created is a simple one. The features from the dataset are extracted at first. Then preprocessing follows in order to simplify and make the data easy to visualize. In the end clustering is performed. Traditional clustering and division of the low-dimensional data in a scale due to its linearity can be applied.
 
