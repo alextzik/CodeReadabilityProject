@@ -48,7 +48,7 @@ By performing dimensionality reduction in both the Metrics and Violations subspa
  It is our belief that the clusters created in the case of the Metrics’ space represent high and low simplicity methods, while the linear structure in the case of the Violations is also a linear scale of readability. This hypothesis is tested as follows. 
  
 ## Evaluation
-A.*Evaluation Methodology*<br/>
+A. *Evaluation Methodology*<br/>
 
 From each cluster in the figures, depicted as the blue and orange areas in Fig. 2, 3, samples are taken and their behavior is derived. The mean value for all the characteristics of the samples in each area is calculated and based on these mean values we may conclude if the codes do actually represent methods with similar simplicity and readability properties. The indicative results are shown in Fig. 4, 5.
 
