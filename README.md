@@ -26,9 +26,11 @@ The primary goal of this assignment is to create lower dimensional spaces for re
 
 ## System Design
 A. *System Overview*<br/>
+
 The structure of the system created is a simple one. The features from the dataset are extracted at first. Then preprocessing follows in order to simplify and make the data easy to visualize. In the end clustering is performed. Traditional clustering and division of the low-dimensional data in a scale due to its linearity can be applied.
 
 B. *Data Preprocessing*<br/>
+
 The large number of objects in the dataset poses a complexity difficulty for the system. Therefore, sampling without substitution is performed to gather approximately 10% of the original data. This quantity of data retains the attributes, characteristics and behaviors of the original data, but also speeds up the application of any algorithm. In addition, any missing values in the dataset were filled in using scikit-learn’s SimpleImputer class, followed by scaling the results to ensure a normal distribution. The scaling is necessary to place all features in the same range and to thus avoid having one characteristic impacting the result of clustering the most.
 
 Due to the large number of dimensions in the feature space, using dimensionality reduction techniques appears to be a good solution in order to compress the information given, gain some further insight into the data and reduce the complexity of the application of different algorithms. Dimensionality reduction was applied separately to the Metrics category and to the Violations category of characteristics, as required by the definitions of readability and simplicity used in this paper.
@@ -36,12 +38,13 @@ Due to the large number of dimensions in the feature space, using dimensionality
 The results gathered show a clearly better performance in separation using Independent Component Analysis (ICA), rather than Principal Components Analysis (PCA), both in the Metrics Dimensionality Reduction and in the Violations Dimensionality Reduction. In Fig. 1 it is evident that the energy of Principal Components scales linearly with the number of components, up until the point where all the dimensions left  correspond to PMDs that have constant values equal to zero. This means that PCA isn’t better than a reordering of the features. On the other hand, the superiority of ICA is due to its tendency to find basis vectors in order to represent the original data as different sub-elements. Therefore, by finding vectors that are independent components of our data, it is easier to end up with a representation that shows clearly separated clusters. ICA is a blind source separation technique. PCA, in the other hand, aims at finding a low-rank representation of the data. In other words, it tries to compress it. This doesn’t always end up with clearly defined clusters in the low-dimension space. In Fig. 3, 4 we can see the 2-dimensional ICA space for Metrics and PMDs.
 
 C. *Model Construction*<br/>
+
 By performing dimensionality reduction in both the Metrics and Violations subspaces, we get the results shown in Fig. 2, 3. It is evident that clear clusters exist in the Metrics case, while there is a linear structure in the case of the Violations.
 
  It is our belief that the clusters created in the case of the Metrics’ space represent high and low simplicity methods, while the linear structure in the case of the Violations is also a linear scale of readability. This hypothesis is tested as follows. 
  
 ## Evaluation
-A.*Evaluation Methodology*
+A.*Evaluation Methodology*<br/>
 From each cluster in the figures, depicted as the blue and orange areas in Fig. 2, 3, samples are taken and their behavior is derived. The mean value for all the characteristics of the samples in each area is calculated and based on these mean values we may conclude if the codes do actually represent methods with similar simplicity and readability properties. The indicative results are shown in Fig. 4, 5.
 
 From the Metrics’ perspective, it is evident the two clusters shown in Fig. 4 correspond to different types of codes. The codes in Area 1 seem to have higher mean values for the features where higher is better for simplicity. For example, Comment Density (CD) is higher and Clone Logical Line Coverage (CLLC) is lower, for the codes that belong to Area 1. This indicates codes in Area 1 have more comments and less duplicate code than the codes in Area 2, which means they are simpler.
@@ -59,10 +62,10 @@ Although there is no guarantee of success for this method, similar techniques ha
 Concluding, in this study a clear distinction between simplicity and readability has been made and a simple yet efficient way of measuring these quantities has been derived. Although there is still further research to be done in the validity of the method, the results presented are optimistic. In addition, the low complexity of the method makes it a useful alternative when trying to measure readability and simplicity. 
 
 ## References
-[1]. H. A. D. P. Posnett Daryl, A Simpler Model of Software Readability, Waikiki, Honolulu, HI, USA: ACM, 2011. 
-[2]. W. W. R. Buse Raymond P. L., Learning a Metric for Code Readability, Piscataway, NJ, USA: IEEE Press, 2010. 
-[3]. J. Dorn, A General Software Readability Model.
-[4].	M. L.-V. D. P. R. O. S. Scalabrinο, Improving code readability models with textual features, 2016. 
+[1]. H. A. D. P. Posnett Daryl, A Simpler Model of Software Readability, Waikiki, Honolulu, HI, USA: ACM, 2011. <br/>
+[2]. W. W. R. Buse Raymond P. L., Learning a Metric for Code Readability, Piscataway, NJ, USA: IEEE Press, 2010.  <br/>
+[3]. J. Dorn, A General Software Readability Model.  <br/>
+[4].	M. L.-V. D. P. R. O. S. Scalabrinο, Improving code readability models with textual features, 2016.  <br/>
 [5].	Mikolov, Tomas & Corrado, G.s & Chen, Kai & Dean, Jeffrey. (2013). Efficient Estimation of Word Representations in Vector Space. 1-12. 
 
  
