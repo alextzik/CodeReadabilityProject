@@ -37,12 +37,9 @@ Due to the large number of dimensions in the feature space, using dimensionality
 
 The results gathered show a clearly better performance in separation using Independent Component Analysis (ICA), rather than Principal Components Analysis (PCA), both in the Metrics Dimensionality Reduction and in the Violations Dimensionality Reduction. In Fig. 1 it is evident that the energy of Principal Components scales linearly with the number of components, up until the point where all the dimensions left  correspond to PMDs that have constant values equal to zero. This means that PCA isn’t better than a reordering of the features. On the other hand, the superiority of ICA is due to its tendency to find basis vectors in order to represent the original data as different sub-elements. Therefore, by finding vectors that are independent components of our data, it is easier to end up with a representation that shows clearly separated clusters. ICA is a blind source separation technique. PCA, in the other hand, aims at finding a low-rank representation of the data. In other words, it tries to compress it. This doesn’t always end up with clearly defined clusters in the low-dimension space. In Fig. 3, 4 we can see the 2-dimensional ICA space for Metrics and PMDs.
 
-![Fig. 1](/figures/Fig1.png)
-*Energy of Principal Components of PMDs*
-
 | ![Fig. 1](/figures/Fig1.png)
 |:--:| 
-| *Energy of Principal Components of PMDs* |
+| *Figure 1. Energy of Principal Components of PMDs* |
 
 C. *Model Construction*<br/>
 
@@ -55,7 +52,23 @@ A.*Evaluation Methodology*<br/>
 
 From each cluster in the figures, depicted as the blue and orange areas in Fig. 2, 3, samples are taken and their behavior is derived. The mean value for all the characteristics of the samples in each area is calculated and based on these mean values we may conclude if the codes do actually represent methods with similar simplicity and readability properties. The indicative results are shown in Fig. 4, 5.
 
+| ![Fig. 2](/figures/Fig2.png)
+|:--:| 
+| *Figure 2. Independent Components Representation of Metrics' Feature Space* |
+
+| ![Fig. 3](/figures/Fig3.png)
+|:--:| 
+| *Figure 3. Independent Components Representation of PMDs' Feature Space* |
+
 From the Metrics’ perspective, it is evident the two clusters shown in Fig. 4 correspond to different types of codes. The codes in Area 1 seem to have higher mean values for the features where higher is better for simplicity. For example, Comment Density (CD) is higher and Clone Logical Line Coverage (CLLC) is lower, for the codes that belong to Area 1. This indicates codes in Area 1 have more comments and less duplicate code than the codes in Area 2, which means they are simpler.
+
+| ![Fig. 4](/figures/Fig4.png)
+|:--:| 
+| *Figure 4. Comparison of Metrics' Values in the Different Areas of the IC Metrics’ Analysis* |
+
+| ![Fig. 5](/figures/Fig5.png)
+|:--:| 
+| *Figure 5. Comparison of PMDs' Values in the Different Areas of the IC Analysis of PMDs* |
 
 For PMDs, the lower values indicate higher readability. As we can clearly see in Fig. 4, Area 1 has higher PMD values, in average, for almost all PMD categories. This indicates codes in Area 2 are more readable than codes in Area 1. It is important to note that the two areas of each space mentioned above is independent and doesn’t refer to the same codes.
 
