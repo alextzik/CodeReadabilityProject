@@ -11,7 +11,7 @@ This assignment concerns the design of a system for measuring code readability. 
 
 In the last few years there have been significant efforts in providing a quantitative meaning to readability in general, namely [1], [2], [3] and [4]. Despite these efforts, there is still no clear definition of the term readability. However, it is a popular opinion that readability is a crucial aspect of any software project. In many cases, other individuals might need to understand one’s code (code reusability) or the developer might need to remember his own code in order to move forward.
 
-As far as code understanding in this paper is concerned, a distinction can be made between simplicity and readability. We consider readability as the ease of reading and understanding the code, whereas simplicity as the measure of how easy the logic of the algorithm is to follow.
+As far as code understanding in this paper is concerned, a distinction can be made between simplicity and readability. We consider readability as the ease of reading and understanding the *code*, whereas simplicity as the measure of how easy the logic of the *algorithm* is to follow.
 
 Both simplicity and readability are a way of ranking the quality of each piece of code. They provide a way of assessing the finished product and giving insight into its quality, maintainability, efficiency and reliability. The measures of readability and simplicity must align with the human perception of these terms, which is also highly subjective. Therefore, even though we think the estimation of these metrics is a regression problem by its nature, we tackle it as a clustering problem.
 
@@ -31,7 +31,7 @@ The structure of the system created is a simple one. The features from the datas
 
 B. *Data Preprocessing*<br/>
 
-The large number of objects in the dataset poses a complexity difficulty for the system. Therefore, sampling without substitution is performed to gather approximately 10% of the original data. This quantity of data retains the attributes, characteristics and behaviors of the original data, but also speeds up the application of any algorithm. In addition, any missing values in the dataset were filled in using scikit-learn’s SimpleImputer class, followed by scaling the results to ensure a normal distribution. The scaling is necessary to place all features in the same range and to thus avoid having one characteristic impacting the result of clustering the most.
+The large number of objects in the dataset poses a complexity difficulty for the system. Therefore, sampling without substitution is performed to gather approximately 10% of the original data. This quantity of data retains the attributes, characteristics and behaviors of the original data, but also speeds up the application of any algorithm. In addition, any missing values in the dataset were filled in using scikit-learn’s *SimpleImputer* class, followed by scaling the results to ensure a normal distribution. The scaling is necessary to place all features in the same range and to thus avoid having one characteristic impacting the result of clustering the most.
 
 Due to the large number of dimensions in the feature space, using dimensionality reduction techniques appears to be a good solution in order to compress the information given, gain some further insight into the data and reduce the complexity of the application of different algorithms. Dimensionality reduction was applied separately to the Metrics category and to the Violations category of characteristics, as required by the definitions of readability and simplicity used in this paper.
 
@@ -45,6 +45,7 @@ By performing dimensionality reduction in both the Metrics and Violations subspa
  
 ## Evaluation
 A.*Evaluation Methodology*<br/>
+
 From each cluster in the figures, depicted as the blue and orange areas in Fig. 2, 3, samples are taken and their behavior is derived. The mean value for all the characteristics of the samples in each area is calculated and based on these mean values we may conclude if the codes do actually represent methods with similar simplicity and readability properties. The indicative results are shown in Fig. 4, 5.
 
 From the Metrics’ perspective, it is evident the two clusters shown in Fig. 4 correspond to different types of codes. The codes in Area 1 seem to have higher mean values for the features where higher is better for simplicity. For example, Comment Density (CD) is higher and Clone Logical Line Coverage (CLLC) is lower, for the codes that belong to Area 1. This indicates codes in Area 1 have more comments and less duplicate code than the codes in Area 2, which means they are simpler.
