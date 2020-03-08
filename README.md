@@ -1,10 +1,10 @@
 # Measuring Readability with Clustering Methods
 
 ### Abstract
-  This assignment is about measuring the readability of code methods that are included in highly ranked projects on  Github. It aims at providing a way of measuring the readability, given certain characteristics and violations of each method. The approach taken is that of clustering. This study shows that dimensionality reduction can be applied to the original data and leads to the creation of easily distinguishable clusters that represent different levels of readability and simplicity. A couple of dimensionality reduction techniques were applied before clustering, and the results show that the best method is ICA.
+  **This assignment is about measuring the readability of code methods that are included in highly ranked projects on  Github. It aims at providing a way of measuring the readability, given certain characteristics and violations of each method. The approach taken is that of clustering. This study shows that dimensionality reduction can be applied to the original data and leads to the creation of easily distinguishable clusters that represent different levels of readability and simplicity. A couple of dimensionality reduction techniques were applied before clustering, and the results show that the best method is ICA.**
 
 ### Keywords
-mining software repositories; code readability; dimensionality reduction; clustering
+** *mining software repositories; code readability; dimensionality reduction; clustering* **
 
 ## Introduction
 This assignment concerns the design of a system for measuring code readability. Code readability is an essential characteristic of any project that includes code development. In today’s world, code development has grown to become even more important than in the past. The ever-growing need for software has resulted in an acceleration of the rate at which code is developed. This has led to the development of difficult-to-understand code that is thus more susceptible to errors.
