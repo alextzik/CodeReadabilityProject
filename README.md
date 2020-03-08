@@ -16,3 +16,15 @@ As far as code understanding in this paper is concerned, a distinction can be ma
 Both simplicity and readability are a way of ranking the quality of each piece of code. They provide a way of assessing the finished product and giving insight into its quality, maintainability, efficiency and reliability. The measures of readability and simplicity must align with the human perception of these terms, which is also highly subjective. Therefore, even though we think the estimation of these metrics is a regression problem by its nature, we tackle it as a clustering problem.
 
 Taking the above into consideration, a new method of measuring readability and simplicity would be extremely valued in the field of Software Development, if it in fact provides accurate and insightful results for each piece of code.
+
+## Research Overview
+The dataset used contains numeric features for approximately 1 million methods from the most famous Github repositories. The data is gathered in files which correspond to repositories, and for each method in every repository we have 78 metrics such as Duplication Metrics, Complexity Metrics and Coupling Metrics and 193 PMDs (features found with the Programming Mistake Detector) such as Brace Rules, Design Rules and Controversial Rules. 
+
+We consider the Metrics’ category to be highly correlated to the human perception of simplicity, because they are more related to the flow of the algorithm rather than the actual language that is used. On the contrary, PMDs are directly associated with the Java language, and how clear a piece of code is, given that we have understood the algorithm’s function.
+
+The primary goal of this assignment is to create lower dimensional spaces for readability and simplicity, where there is a clear separation of the data in different categories based on these metrics.
+
+## System Design
+* A. System Overview
+The structure of the system created is a simple one. The features from the dataset are extracted at first. Then preprocessing follows in order to simplify and make the data easy to visualize. In the end clustering is performed. Traditional clustering and division of the low-dimensional data in a scale due to its linearity can be applied.
+
